@@ -3,48 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youralpha</title>
+    <title>Belajar HTML & CSS</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="navbar">ini adalah navbar</div>
+    <!-- Navbar -->
+    <div id="navbar"><h1 id="judul"></h1></div>
+
+    <!-- Body -->
     <div id="body">
+      <!-- Card 1: Dropdown -->
+      <div class="card coba">
+        <h3>Dropdown</h3>
+        <label for="pilih">Pilih Bahasa Pemrograman:</label>
+        <select id="pilih">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+          <option>Python</option>
+        </select>
+      </div>
+
+      <!-- Card 2: Input Form -->
+      <div class="card">
+        <h3>Form Input</h3>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Masukkan email" />
+        <button>Kirim</button>
+      </div>
+
+      <!-- Card 3: Table -->
+      <div class="card">
+        <h3>Tabel Data</h3>
+        <table>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nilai</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Alpha</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Budi</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Citra</td>
+            <td>92</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Card 4: Button Variasi -->
+      <div class="card">
+        <h3>Button Variasi</h3>
+        <button class="btn-primary">Primary Button</button>
+        <button class="btn-secondary">Secondary Button</button>
+        <button class="btn-success">Success Button</button>
+        <button class="btn-danger">Danger Button</button>
+      </div>
+
+      <!-- Card 5: Image + Caption -->
       <div class="card">
         <h3>Image + Caption</h3>
         <div class="image-container">
           <img
-            src="https://cdn.rri.co.id/berita/Surakarta/o/1742925610317-WhatsApp_Image_2025-03-26_at_00.52.32/xk9m2z66k81giz4.jpeg"
-            alt="gambar dari internet"
+            src="https://cdn.oneesports.id/cdn-data/sites/2/2022/05/HunterxHunter_featured-1024x576-1.jpg"
+            alt="Placeholder Image"
           />
-          <p>ini gambar gunung bromo</p>
+          <p class="caption">
+            Ini adalah contoh gambar dengan caption di bawahnya.
+          </p>
         </div>
       </div>
+
+      <!-- Card 6: List (ul/ol) -->
       <div class="card">
-        <h3>Embed vidio dari youtube :</h3>
+        <h3>List (Unordered & Ordered)</h3>
+        <h4>Bahasa Pemrograman:</h4>
+        <ul>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+        <h4>Langkah Belajar:</h4>
+        <ol>
+          <li>Pelajari HTML</li>
+          <li>Pelajari CSS</li>
+          <li>Pelajari JavaScript</li>
+        </ol>
+      </div>
+
+      <!-- Card 7: Progress Bar -->
+      <div class="card">
+        <h3>Progress Bar</h3>
+        <label>HTML (90%)</label>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%"></div>
+        </div>
+        <label>CSS (75%)</label>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%"></div>
+        </div>
+        <label>JavaScript (60%)</label>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%"></div>
+        </div>
+      </div>
+
+      <!-- Card 8: Alert Box -->
+      <div class="card">
+        <h3>Alert Box</h3>
+        <div class="alert alert-success">
+          <strong>Success!</strong> Data berhasil disimpan.
+        </div>
+        <div class="alert alert-warning">
+          <strong>Warning!</strong> Periksa kembali data Anda.
+        </div>
+        <div class="alert alert-error">
+          <strong>Error!</strong> Terjadi kesalahan sistem.
+        </div>
+      </div>
+
+      <!-- Card 9: Iframe (YouTube/Map) -->
+      <div class="card">
+        <h3>Iframe (YouTube)</h3>
         <iframe
-          src="https://www.youtube.com/embed/pgQ5EF-HAs8"
           width="100%"
           height="200"
-          allow="accelerometer: autoplay; autoplay: clipboard-write; encrypted-media: gryroscope; picture-in-picture"
-          allowfullscreen
+          src="https://www.youtube.com/embed/URTTB81Wn78"
           frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
         ></iframe>
-        <p>Ini contoh embed vidio dari youtube</p>
+        <p class="caption">Contoh embed video YouTube</p>
       </div>
-      <div class="card">
-        <h3>Image + Caption</h3>
-        <div class="image-container">
-          <img src="img/dc4.png" alt="gambar dari internet" />
-          <p>ini gambar gunung bromo</p>
-        </div>
-      </div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
     </div>
-    <div id="footer">ini adalah footer</div>
+
+    <!-- Footer -->
+    <div id="footer">Footer - &copy; 2025 Alpha</div>
+    <script src="script.js"></script>
   </body>
 </html>
