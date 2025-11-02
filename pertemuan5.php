@@ -1,3 +1,18 @@
+<?php 
+
+if (isset($_GET['submit'])) {
+    header("Location: get.php");
+    exit;
+}
+
+if (isset($_POST['submit'])) {
+    header("Location: post.php");
+    exit;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +34,7 @@
                     masukan nama :
                     <input type="text" name="nama" class="border-2 border-gray-300 rounded p-1 mb-3">
                     <br> 
-                    <button type="submit" class="bg-blue-500 text-white font-bold px-4 py-2 rounded">Kirim</button>
+                    <button type="submit" name="submit" class="bg-blue-500 text-white font-bold px-4 py-2 rounded">Kirim</button>
                 </form>
             </div>
             <div class="col-span-1 rounded-lg shadow-lg bg-white gap-6 p-6">
@@ -28,7 +43,7 @@
                     masukan nama :
                     <input type="text" name="nama" class="border-2 border-gray-300 rounded p-1 mb-3">
                     <br> 
-                    <button type="submit" class="bg-blue-500 text-white font-bold px-4 py-2 rounded">Kirim</button>
+                    <button type="submit" name="submit" class="bg-blue-500 text-white font-bold px-4 py-2 rounded">Kirim</button>
                 </form>
             </div>
             <div class="col-span-1 rounded-lg shadow-lg bg-white gap-6 p-6">
