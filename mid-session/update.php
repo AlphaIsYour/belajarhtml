@@ -1,30 +1,3 @@
-<?php 
-require 'koneksi.php';
-
-$id = (int)$_GET["id"];
-$mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
-
-if (isset($_POST["submit"])){
-
-    if ( update($_POST) > 0 ) {
-        echo "
-        <script>
-        alert('Data Berhasil Diubah!');
-        document.location.href = 'mahasiswa.php';
-        </script>
-        ";
-    } else {
-        echo "
-        <script>
-        alert('Data Gagal Diubah!');
-        document.location.href = 'mahasiswa.php';
-        </script>
-        ";
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

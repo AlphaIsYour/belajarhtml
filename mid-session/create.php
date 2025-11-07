@@ -1,25 +1,3 @@
-<?php 
-require 'koneksi.php';
-
-if (isset($_POST["submit"])) {
-    if (create($_POST) > 0) {
-        echo "
-        <script>
-        alert('Data Berhasil Ditambahkan!');
-        document.location.href = 'mahasiswa.php';
-        </script>
-        ";
-    } else {
-        echo "
-        <script>
-        alert('Data Gagal Ditambahkan!');
-        document.location.href = 'mahasiswa.php';
-        </script>
-        ";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

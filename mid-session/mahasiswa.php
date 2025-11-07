@@ -1,6 +1,24 @@
 <?php 
-require 'koneksi.php';
-$mahasiswa = query("SELECT * FROM mahasiswa");
+$mahasiswa = [
+    [
+        "id" => 1,
+        "nama" => "Hasan",
+        "gambar" => "img1.jpg",
+        "nim" => "243140700111033",
+        "alamat" => "Malang",
+        "jurusan" => "Teknologi Informasi",
+        "email" => "hasan@gmail.com",
+    ],
+    [
+        "id" => 2,
+        "nama" => "Bagas",
+        "gambar" => "img2.jpg",
+        "nim" => "243140700111034",
+        "alamat" => "Malang",
+        "jurusan" => "Teknologi Informasi",
+        "email" => "bagas@gmail.com",
+    ],
+];
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +60,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach($mahasiswa as $mhs) : ?>
+                    <?php foreach($mahasiswa as $mhs)  : ?>
                         <tr class="hover:bg-gray-50 transition">
                             <td class="border border-gray-300 px-4 py-2"><?= $i; ?></td>
                             <td class="border border-gray-300 px-4 py-2 font-medium"><?= $mhs["nama"]; ?></td>
@@ -56,11 +74,11 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                             <td class="border border-gray-300 px-4 py-2">
                                 <a href="read.php?id=<?= $mhs['id']; ?>" class="bg-green-500 rounded-sm mb-2 p-2 text-white font-bold">Lihat</a>
                                 <a href="update.php?id=<?= $mhs['id']; ?>" class="bg-yellow-500 rounded-sm mb-2 p-2 text-white font-bold">Edit</a>
-                                <a href="delete.php?id=<?= $mhs['id']; ?>" class="bg-red-500 rounded-sm mb-2 p-2 text-white font-bold" onclick="confirm('Yakin ingin menghapus data ini?')">Hapus</a>
+                                <a href="delete.php?id=<?= $mhs['id']; ?>" class="bg-red-500 rounded-sm mb-2 p-2 text-white font-bold" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
                             </td>
                         </tr>
                         <?php $i++; ?>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
                 </tbody>
             </table>
 
