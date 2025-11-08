@@ -1,3 +1,25 @@
+<?php 
+require 'koneksi.php';
+
+$id = (int)$_GET["id"];
+$mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
+
+if (isset($_POST['submit'])) {
+    if (update($_POST) > 0 ){
+      echo "<script>
+      alert('data berhasil diubah');
+      document.location.href = 'mahasiswa.php';
+      </script>";
+    } else {
+      echo "<script>
+      alert('data gagal diubah');
+      document.location.href = 'mahasiswa.php';
+      </script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +44,8 @@
       </div>
 
       <div>
-        <label for="gambar" class="block text-gray-700 mb-1 font-medium">Gambar</label>
-        <input type="text" alt="Gambar" name="gambar" id="gambar" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" value="<?= $mhs["gambar"] ?>">
+        <label for="foto" class="block text-gray-700 mb-1 font-medium">foto</label>
+        <input type="text" alt="foto" name="foto" id="foto" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" value="<?= $mhs["foto"] ?>">
       </div>
 
       <div>

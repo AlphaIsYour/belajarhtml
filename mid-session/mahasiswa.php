@@ -1,25 +1,9 @@
 <?php 
-$mahasiswa = [
-    [
-        "id" => 1,
-        "nama" => "Hasan",
-        "gambar" => "img1.jpg",
-        "nim" => "243140700111033",
-        "alamat" => "Malang",
-        "jurusan" => "Teknologi Informasi",
-        "email" => "hasan@gmail.com",
-    ],
-    [
-        "id" => 2,
-        "nama" => "Bagas",
-        "gambar" => "img2.jpg",
-        "nim" => "243140700111034",
-        "alamat" => "Malang",
-        "jurusan" => "Teknologi Informasi",
-        "email" => "bagas@gmail.com",
-    ],
-];
+require 'koneksi.php';
+$mahasiswa = query("SELECT * FROM mahasiswa");
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +25,7 @@ $mahasiswa = [
 </head>
 <body class=" bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 min-h-screen">
     <nav class="flex justify-center items-center h-20 bg-blue-700 mb-8">
-        <h1 class="text-2xl font-bold text-white">Dashboard Pengelolaan Data Mahasiswa</h1>
+        <h1 class="text-2xl font-bold text-white">Dashboard MAHASISWA</h1>
     </nav>
     <div class="px-20 w-8xl gap-4">
         <a href="create.php" class="bg-blue-500 rounded-sm p-2 text-white font-bold">Tambah</a>
@@ -65,7 +49,7 @@ $mahasiswa = [
                             <td class="border border-gray-300 px-4 py-2"><?= $i; ?></td>
                             <td class="border border-gray-300 px-4 py-2 font-medium"><?= $mhs["nama"]; ?></td>
                             <td class="border border-gray-300 px-4 py-2">
-                                <img src="img/<?= $mhs["gambar"]; ?>" alt="<?= $mhs["nama"]; ?>" class="w-12 h-12 object-cover  mx-auto">
+                                <img src="img/<?= $mhs["foto"]; ?>" alt="<?= $mhs["nama"]; ?>" class="w-12 h-12 object-cover  mx-auto">
                             </td>
                             <td class="border border-gray-300 px-4 py-2"><?= $mhs["nim"]; ?></td>
                             <td class="border border-gray-300 px-4 py-2"><?= $mhs["alamat"]; ?></td>

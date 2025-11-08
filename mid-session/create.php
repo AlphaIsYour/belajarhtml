@@ -1,3 +1,23 @@
+<?php 
+require 'koneksi.php';
+
+
+if (isset($_POST['submit'])) {
+    if (create($_POST) > 0 ){
+      echo "<script>
+      alert('data berhasil dibuat');
+      document.location.href = 'mahasiswa.php';
+      </script>";
+    } else {
+      echo "<script>
+      alert('data berhasil dibuat');
+      document.location.href = 'mahasiswa.php';
+      </script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +39,7 @@
 <body>
 
   <nav class="flex justify-center items-center h-20 bg-blue-700 shadow-md mb-4">
-    <h1 class="text-2xl font-bold text-white tracking-wide">Dashboard Pengelolaan Data Mahasiswa</h1>
+    <h1 class="text-2xl font-bold text-white tracking-wide">Dashboard Pengelolaan Data Buah Buahan</h1>
   </nav>
 
   <div class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg border">
@@ -32,8 +52,8 @@
       </div>
 
       <div>
-        <label for="gambar" class="block text-gray-700 mb-1 font-medium">Gambar</label>
-        <input type="text" name="gambar" id="gambar" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <label for="foto" class="block text-gray-700 mb-1 font-medium">Foto</label>
+        <input type="text" name="foto" id="foto" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
       </div>
 
       <div>
